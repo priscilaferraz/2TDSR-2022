@@ -1,0 +1,72 @@
+ORDEM - TABELA DE ORIGEM (FUNCIONARIO (MATRICULA) PARA A TABELA DE DESTINO (DEPENDENTE QUE RECEBE A 
+MATRICULA DO FUNCIONARIO-(QUE RECEBE A CHAVE)
+
+-- 1) descobrir os dados que precisa e onde estão:
+
+-- 2) descobrir como as tabelas envolvidas se relacionam:
+-- T_SIP_PROJETO       -> T_SIP_IMPLANTACAO    -> CD_PROJETO  
+-- T_SIP_FUNCIONARIO   -> T_SIP_IMPLANTACAO    -> NR_MATRICULA
+
+
+GIT 
+
+# Configurar usuário com git:
+git config --global user.name "Fulano de Tal"
+git config --global user.email fulanodetal@exemplo.br
+
+# Criar novo repositório
+# criar a pasta:
+mkdir <nomeProjeto>
+
+# acessar a pasta:
+cd <nomePasta>
+
+# Inicializar git na pasta: 
+git init
+
+# Verificar o status do repositório:
+git status
+
+# Adicionar o arquivo no controle do git (vc pode obter o caminho relativo do arquivo com nm do arquivo com o comando git status):
+gitt add <caminhoRelativoDoArquivo+NomeArquivo>
+
+# Commitar (precisa ter arquivos adicionados vide passo anterior):
+git commit -m "Add nome da pasta"" para ser vercionado pelo git
+
+# Visualizar os commits feitos na branch atual:
+git log
+# Para visualizar os arquivos commitados em cada commit:
+git log --name-only
+ 
+# utilizando a hash (codigo de identificação do commit) ver alterações feitas naquele commit - git show 1a80a56f9c0d5c0b102fb8154330a548144170c7
+
+# Comparar versões do código:
+# Comparando com o último commit da branch atual:
+git diff
+# Comparando branchs:
+git diff <nmOutraBranch>
+# Comparando com outro commit:
+git diff <hashDoCommit>
+
+# Desfazendo as alterações em um determinado arquivo:
+git checkout <nmArquivo>
+
+-------------------------------------------------------------------------------------
+
+# Dica para retornar para o nível de pasta anterior
+cd..
+
+# Clonar repositório:
+git clone <enderecoDaURI>
+
+# Enviar as modificações para a branch no servidor
+git pull origin <nmBranch>
+git push origin <nmBranch>
+
+# Criar branch:
+git checkout -b "<novaBranch>"
+
+# Listar as branchs que eu possuo na minha máquina (a que vier com * é a atual):
+git branch
+
+
